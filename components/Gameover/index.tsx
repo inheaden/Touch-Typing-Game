@@ -70,15 +70,15 @@ const GameOver = ({}: Props) => {
       <div className="flex flex-col">
         <div>WPM: {wpm.toFixed(2)}</div>
         <div>Accuracy: {accuracy.toFixed(2)}%</div>
-        <div className="font-bold">Score: {score.toFixed(0)}</div>
+        <div className="font-bold">Your Score: {score.toFixed(0)}</div>
         <div className="font-bold">
-          Position: {position} {position < 11 ? "🎉" : ""}
+          Global Position: {position} {position < 11 ? "🎉" : ""}
         </div>
       </div>
 
       {results && (
         <div className="mt-4">
-          <h2 className="text-xl mb-2">Leaderboard</h2>
+          <h2 className="text-xl mb-2">Lobby Board</h2>
           <div className="flex flex-col gap-2">
             {Object.entries(results)
               .map(([name, entry]) => ({
